@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My calculator</title>
+  </head>
+  <body>
+    <div class="table-con">
+      <!-- <h1>Calculator</h1> -->
+      <div class="power" onclick="toggleButtons()">
+        <i class="fa-solid fa-power-off"></i>
+      </div>
+      <input type="text" id="result" readonly />
+      <table>
+        <tr>
+          <td><button onclick="appendNumber(7)">7</button></td>
+          <td><button onclick="appendNumber(8)">8</button></td>
+          <td><button onclick="appendNumber(9)">9</button></td>
+          <td><button onclick="appendOperator('+')" class="oper">+</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="appendNumber(4)">4</button></td>
+          <td><button onclick="appendNumber(5)">5</button></td>
+          <td><button onclick="appendNumber(6)">6</button></td>
+          <td><button onclick="appendOperator('-')" class="oper">-</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="appendNumber(1)">1</button></td>
+          <td><button onclick="appendNumber(2)">2</button></td>
+          <td><button onclick="appendNumber(3)">3</button></td>
+          <td><button onclick="appendOperator('*')" class="oper">*</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="appendNumber(0)" class="oper">0</button></td>
+          <td><button onclick="clearResult()" class="oper">C</button></td>
+          <td>
+            <button onclick="calculateResult()" class="oper">=</button>
+          </td>
+          <td><button onclick="appendOperator('/')" class="oper">/</button></td>
+        </tr>
+      </table>
+    </div>
+    <script src="function.js"></script>
+  </body>
+</html>
